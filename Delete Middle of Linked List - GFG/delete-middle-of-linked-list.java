@@ -55,6 +55,9 @@ class Node {
 
 class Solution {
     Node deleteMid(Node head) {
+        if(head==null){
+            return null;
+        }
         Node slow =head;
         Node fast =head;
         Node prev =head;
