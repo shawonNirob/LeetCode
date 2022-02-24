@@ -11,7 +11,7 @@
 class Solution {
     public boolean isPalindrome(ListNode head) {
         
-        List<Integer> nums = new ArrayList<>();
+        ArrayList<Integer> nums = new ArrayList<>();
         ListNode curr = head;
         while(curr!=null){
             nums.add(curr.val);
