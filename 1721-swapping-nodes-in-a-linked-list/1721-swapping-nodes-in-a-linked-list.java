@@ -18,24 +18,19 @@ class Solution {
             node1=node1.next;
             count++;
         }
-        int n=count-(k%count)+1;
-        k=k%count;
-        if(k>n){
-            int tem=n;
-            n=k;
-            k=tem;
-        }
+        int n=count-k;
+     
         node1=head;
         int i=1;
         while(i<count){
              if(i<k){
                 node1=node1.next;
             }
-            if(i<n){
+            if(i<=n){
                 node2=node2.next;
             }
             i++;
-            if(i==n){
+            if(i>n && i>k){
                 break;
             }
         }
