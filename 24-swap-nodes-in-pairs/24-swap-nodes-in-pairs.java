@@ -1,31 +1,27 @@
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * struct ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
+ *     struct ListNode *next;
+ * };
  */
-class Solution {
-    public ListNode swapPairs(ListNode head) {
-        ListNode dummyNode = new ListNode(-1);
-        dummyNode.next = head;
-        
-        ListNode prevNode = dummyNode;
 
-        while(head!=null && head.next!=null){
-            ListNode firstNode=head;
-            ListNode secondNode=head.next;
-            
-            prevNode.next = secondNode;
-            firstNode.next = secondNode.next;
-            secondNode.next = firstNode;
-            
-            prevNode = firstNode;
-            head = firstNode.next;
-        }
-        return dummyNode.next;
+struct ListNode* swapPairs(struct ListNode* head){
+ 
+    struct ListNode* curr = head;
+    struct ListNode* nex= NULL;
+    struct ListNode* prev = NULL;
+
+    int count=0;
+    while(curr!= NULL && count<2){
+        nex=curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = nex;
+        count++;
     }
+    if(head != NULL){
+        head->next = swapPairs(nex);
+    }
+    return prev;
 }
