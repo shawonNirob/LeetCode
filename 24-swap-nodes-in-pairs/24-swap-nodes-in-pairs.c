@@ -7,9 +7,7 @@
  */
 
 struct ListNode* swapPairs(struct ListNode* head){
-    if(head==NULL){
-        return head;
-    }
+ 
     struct ListNode* curr = head;
     struct ListNode* nex= NULL;
     struct ListNode* prev = NULL;
