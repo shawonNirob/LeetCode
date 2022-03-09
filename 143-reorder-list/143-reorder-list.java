@@ -26,17 +26,13 @@ class Solution {
         }
         ListNode curr = head;
         while(prev.next!=null){
-            ListNode nex1 = curr.next;
+            slow = curr.next;
             curr.next = prev;
-            curr = nex1;
-            if(prev==curr){
-                break;
-            }
-
-            ListNode nex2 = prev.next;
+            curr = slow;
+          
+            fast = prev.next;
             prev.next = curr;
-            prev = nex2;
-            
+            prev = fast;
         }
     }
 }
