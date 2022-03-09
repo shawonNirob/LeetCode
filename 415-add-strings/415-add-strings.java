@@ -21,7 +21,7 @@ class Solution {
             result.append(carry);
         }
        
-            
-        return result.reverse().toString();
+        StringBuilder ans =  result.reverse();  
+        return ans.toString();
     }
 }
