@@ -6,21 +6,10 @@ class Solution {
         int p = num1.length() - 1;
         int q = num2.length() - 1;
         
-        int x = 0;
-        int y = 0;
-        
         while(p>=0 || q>=0){
-            if(p>=0){
-                x = num1.charAt(p) - '0';
-            }else{
-                x = 0;
-            }
+            int x = p >= 0 ? num1.charAt(p) - '0' : 0;
+            int y = q >= 0 ? num2.charAt(q) - '0' : 0;
             
-            if(q>=0){
-                y = num2.charAt(q) - '0';
-            }else{
-                y = 0;
-            }
             int sum = x + y + carry;
             result.append(sum%10);
             carry=sum/10;
