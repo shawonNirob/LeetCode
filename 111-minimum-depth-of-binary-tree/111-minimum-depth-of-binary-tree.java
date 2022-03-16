@@ -15,22 +15,15 @@
  */
 class Solution {
   public int minDepth(TreeNode root) {
-    if (root == null) {
-      return 0;
-    }
+    if (root == null) return 0;
 
-    if ((root.left == null) && (root.right == null)) {
-      return 1;
-    }
+    int left = minDepth(root.left);
+    int right = minDepth(root.right);
 
-    int min_depth = Integer.MAX_VALUE;
-    if (root.left != null) {
-      min_depth = Math.min(minDepth(root.left), min_depth);
+    if (left == 0 || right == 0){
+        return left + right + 1;
+    }else{
+        return Math.min(left,right) +1;
     }
-    if (root.right != null) {
-      min_depth = Math.min(minDepth(root.right), min_depth);
-    }
-
-    return min_depth + 1;
   }
 }
