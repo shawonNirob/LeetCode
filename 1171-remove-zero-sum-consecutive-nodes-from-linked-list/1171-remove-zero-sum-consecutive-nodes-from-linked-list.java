@@ -10,31 +10,28 @@
  */
 class Solution {
     public ListNode removeZeroSumSublists(ListNode head) {
-        ListNode dummy = new ListNode(-1001); 
-        dummy.next = head;
-        ListNode curr = dummy;
+        ListNode dummy = new ListNode(-1001);
         HashMap<Integer, ListNode> map = new HashMap<>();
         int pSum = 0;
+        dummy.next = head;
+        ListNode curr = dummy;
         
         while(curr!=null){
-             pSum+=curr.val;
+            pSum +=curr.val;
             if(map.containsKey(pSum)){
                 curr = map.get(pSum).next;
                 int p = pSum + curr.val;
-                
-                while(p!=pSum){
+                while(p!= pSum){
                     map.remove(p);
                     curr = curr.next;
-                    p += curr.val; 
+                    p +=curr.val;
                 }
-               map.get(pSum).next= curr.next;
+                map.get(pSum).next = curr.next;
             }else{
                 map.put(pSum, curr);
             }
             curr = curr.next;
         }
-        
         return dummy.next;
-        
     }
 }
