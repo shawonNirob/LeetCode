@@ -12,8 +12,7 @@ class MyHashSet {
     
     public void add(int key) {
         int index = key % ARRAY_SIZE;
-        List<Integer> childList = new ArrayList<>();
-        childList =  parentList.get(index);
+        List<Integer> childList = parentList.get(index);
         if(childList==null){
             List<Integer> list  = new LinkedList<>();
             list.add(key);
