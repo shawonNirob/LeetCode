@@ -1,21 +1,3 @@
-class Solution {
-    public ArrayList<Integer> range = new ArrayList<>();
-
-    /** @param head The linked list's head.
-        Note that the head is guaranteed to be not null, so it contains at least one node. */
-    public Solution(ListNode head) {
-        while (head != null) {
-            range.add(head.val);
-            head = head.next;
-        }
-    }
-
-    /** Returns a random node's value. */
-    public int getRandom() {
-        int pick =(int)(Math.random() * this.range.size());
-        return range.get(pick);
-    }
-}
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -25,4 +7,32 @@ class Solution {
  *     ListNode(int val) { this.val = val; }
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
+ */
+class Solution {
+    int length = 0;
+    ListNode head;
+    
+    public Solution(ListNode head) {
+        this.head = head;
+        ListNode curr =head;
+        while(curr!=null){
+            curr = curr.next;
+            length++;
+        }
+    }
+    
+    public int getRandom() {
+        int pick =(int)(Math.random() * length);
+        ListNode curr = head;
+        for(int i =0; i <pick; i++){
+            curr = curr.next;
+        }
+        return curr.val;
+    }
+}
+
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution obj = new Solution(head);
+ * int param_1 = obj.getRandom();
  */
