@@ -1,13 +1,14 @@
 class Solution {
     public void reverseString(char[] s) {
-        int j = s.length-1;
-        for(int i=0; i<s.length; i++){
-            if(i>=j) break;
-            char temp = s[i];
-            s[i] = s[j];
-            s[j] = temp;
-            
-            j--;
-        }
+        int left=0;
+        int right = s.length-1;
+        recursive(s, left, right);
+    }
+    public void recursive(char[] s, int left, int right){
+        if(left>=right) return;
+        char temp = s[left];
+        s[left] = s[right];
+        s[right] = temp;
+        recursive(s, left+1, right-1);
     }
 }
