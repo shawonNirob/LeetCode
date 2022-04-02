@@ -4,14 +4,7 @@ class Solution {
         
         while(i<=j){
             if(s.charAt(i) != s.charAt(j)){
-                if(checkPalindrome(s, i+1, j)){
-                    i +=1;
-                }
-                else if(checkPalindrome(s, i, j-1)){
-                    j -=1;
-                }else{
-                    return false;
-                }
+                return (checkPalindrome(s, i+1, j) || checkPalindrome(s, i, j-1));
             }
             i++;
             j--;
