@@ -14,8 +14,7 @@ class Solution {
         while(low<high){
             int sum = nums[i] + nums[low] + nums[high];
             if(sum==0){
-                list.add(Arrays.asList(nums[i], nums[low], nums[high]));
-                low++; high--;
+                list.add(Arrays.asList(nums[i], nums[low++], nums[high--]));
                 while(low < high && nums[low]==nums[low-1]){
                     low++;
                 }
