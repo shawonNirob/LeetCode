@@ -22,6 +22,9 @@ class Solution {
                 high--;
             }else{
                 low++;
+                 while(low < high && nums[low]==nums[low-1]){
+                    low++;
+                }
             }
         }
     }
