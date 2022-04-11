@@ -19,8 +19,8 @@ class Solution {
             }
         }
         int sum = 0;
-        for(int i=0; i<op.length; i++){
-            sum += op[i];
+        for(int i: op){
+            sum += i;
         }
       
         return sum;
