@@ -15,24 +15,9 @@
  */
 class Solution {
     public int maxDepth(TreeNode root) {
-        LinkedList<TreeNode> stack = new LinkedList<>();
-        LinkedList<Integer> depths = new LinkedList<>();
-        
-        int depth=0, currentDepth = 0;
-        stack.add(root);
-        depths.add(1);
-        while(!stack.isEmpty()){
-            root = stack.pollLast();
-            currentDepth = depths.pollLast();
-            
-            if(root!=null){
-                depth = Math.max(depth, currentDepth);
-                stack.add(root.left);
-                stack.add(root.right);
-                depths.add(currentDepth+1);
-                depths.add(currentDepth+1);
-            }
-        }
-        return depth;
+        if(root==null) return 0;
+        int left = maxDepth(root.left)+1;
+        int right = maxDepth(root.right)+1;
+        return Math.max(left, right);
     }
 }
