@@ -21,7 +21,7 @@ class Solution {
         
         while(!queue.isEmpty()){
             int count = 0;
-            double sum=0.0;
+            double sum=0;
             int size = queue.size();
             for(int i=0; i<size; i++){
                 TreeNode node = queue.poll();
