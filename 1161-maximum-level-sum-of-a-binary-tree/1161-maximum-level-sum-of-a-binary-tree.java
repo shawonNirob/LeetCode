@@ -17,8 +17,8 @@ import java.util.*;
 import java.util.AbstractMap.SimpleEntry;
 class Solution {
     public int maxLevelSum(TreeNode root) {
+        int maxLevel = 1; int maxSum = root.val;
         Queue<TreeNode> queue = new LinkedList();
-        Queue<Map.Entry<Integer, Integer>> maxq = new PriorityQueue(Map.Entry.comparingByValue(Collections.reverseOrder()));
         queue.add(root);
         
         int level = 1;
@@ -32,11 +32,13 @@ class Solution {
                 if(node.left !=null ) queue.add(node.left);
                 if(node.right !=null ) queue.add(node.right);
             }
-            maxq.add(new AbstractMap.SimpleEntry<>(level, sum));
+            if(sum>maxSum){
+                maxSum = sum;
+                maxLevel = level;
+            }
             
             level++;
         }
-        Map.Entry<Integer, Integer> a = maxq.peek();
-        return a.getKey();
+        return maxLevel;
     }
 }
