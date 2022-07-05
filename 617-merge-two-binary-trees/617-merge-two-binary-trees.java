@@ -16,23 +16,23 @@
 class Solution {
     public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
         if(root1 == null) return root2;
-        Stack<TreeNode[]> stack = new Stack();
-        stack.push(new TreeNode[] {root1, root2});
+        Queue<TreeNode[]> queue = new LinkedList();
+        queue.add(new TreeNode[] {root1, root2});
         
-        while(!stack.isEmpty()){
-            TreeNode[] root = stack.pop();
+        while(!queue.isEmpty()){
+            TreeNode[] root = queue.poll();
             if(root[1] == null) continue;
             
             root[0].val += root[1].val;
             if(root[0].left == null){
                 root[0].left = root[1].left;
             }else{
-                stack.push(new TreeNode[] {root[0].left, root[1].left});
+                queue.add(new TreeNode[] {root[0].left, root[1].left});
             }
             if(root[0].right == null){
                 root[0].right = root[1].right;
             }else{
-                stack.push(new TreeNode[] {root[0].right, root[1].right});
+                queue.add(new TreeNode[] {root[0].right, root[1].right});
             }
         }
         return root1;
