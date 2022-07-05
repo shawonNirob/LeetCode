@@ -21,7 +21,7 @@ class Solution {
         
         while(!stack.isEmpty()){
             TreeNode[] root = stack.pop();
-            if(root[0] == null || root[1] == null) continue;
+            if(root[1] == null) continue;
             
             root[0].val += root[1].val;
             if(root[0].left == null){
