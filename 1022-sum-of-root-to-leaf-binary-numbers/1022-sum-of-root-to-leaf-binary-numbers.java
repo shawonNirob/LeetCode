@@ -15,26 +15,26 @@
  */
 class Solution {
     public int sumRootToLeaf(TreeNode root) {
-        int rootToLeaf = 0, currNumber = 0;
+        int totalSum=0, currSum=0;
         Deque<Pair<TreeNode, Integer>> stack = new ArrayDeque();
         stack.push(new Pair(root, 0));
-
-        while (!stack.isEmpty()) {
-          Pair<TreeNode, Integer> p = stack.pop();
-          root = p.getKey();
-          currNumber = p.getValue();
-
-          if (root != null) {
-            currNumber = (currNumber << 1) | root.val;
-            // if it's a leaf, update root-to-leaf sum
-            if (root.left == null && root.right == null) {
-              rootToLeaf += currNumber;
-            } else {
-              stack.push(new Pair(root.right, currNumber));
-              stack.push(new Pair(root.left, currNumber));
+        
+        while(!stack.isEmpty()){
+            Pair<TreeNode, Integer> curr = stack.pop();
+            root = curr.getKey();
+            currSum = curr.getValue();
+            
+            if(root!=null){
+                currSum = currSum*2 + root.val;
+                if(root.left==null && root.right==null){
+                    totalSum += currSum;
+                }else{
+                    stack.push(new Pair(root.right, currSum));
+                    stack.push(new Pair(root.left, currSum));
+                }
             }
-          }
+            
         }
-        return rootToLeaf;
+        return totalSum;
     }
 }
