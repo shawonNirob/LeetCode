@@ -24,14 +24,18 @@ class Solution {
             }else{
                 pre = root.left;
                 
-                while(pre.right != null){
+                while(pre.right != null && pre.right != root){
                     pre=pre.right;
                 }
-                pre.right = root;
-                
-                TreeNode curr = root.left;
-                root.left = null;
-                root = curr;
+                if(pre.right == root){
+                    pre.right =null;
+                    root = root.right;
+                    
+                }else{
+                    if(root.val != res) return false;
+                    pre.right = root;
+                    root = root.left;
+                }
             }
         }
         return true;
