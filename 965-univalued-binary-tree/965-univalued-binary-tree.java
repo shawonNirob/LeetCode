@@ -15,16 +15,24 @@
  */
 class Solution {
     public boolean isUnivalTree(TreeNode root) {
-        Stack<TreeNode> stack = new Stack();
-        stack.push(root);
         int res = root.val;
-        while(!stack.isEmpty()){
-            TreeNode curr = stack.pop();
-            
-            if(curr.val != res) return false;
-            
-            if(curr.right != null) stack.push(curr.right);
-            if(curr.left != null) stack.push(curr.left);
+        TreeNode pre;
+        while(root != null){
+            if(root.left == null){
+                if(root.val != res) return false;
+                root=root.right;
+            }else{
+                pre = root.left;
+                
+                while(pre.right != null){
+                    pre=pre.right;
+                }
+                pre.right = root;
+                
+                TreeNode curr = root.left;
+                root.left = null;
+                root = curr;
+            }
         }
         return true;
     }
