@@ -14,23 +14,18 @@
  * }
  */
 class Solution {
-    public boolean res=true;
-    
     public boolean isUnivalTree(TreeNode root) {
-        int val = root.val;
-        preorder(root, val);
-        if(res){
-            return true;
+        Stack<TreeNode> stack = new Stack();
+        stack.push(root);
+        int res = root.val;
+        while(!stack.isEmpty()){
+            TreeNode curr = stack.pop();
+            
+            if(curr.val != res) return false;
+            
+            if(curr.right != null) stack.push(curr.right);
+            if(curr.left != null) stack.push(curr.left);
         }
-        return false;
-    }
-    
-    public void preorder(TreeNode root, int val){
-        if(root == null) return;
-        
-        if(root.val != val) res = false;
-        
-        if(root.left != null) preorder(root.left, val);
-        if(root.right != null) preorder(root.right, val);
+        return true;
     }
 }
