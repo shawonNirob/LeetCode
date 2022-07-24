@@ -24,9 +24,11 @@ class Solution {
     public void preorder(TreeNode root,List<String> list, String path){
         if(root==null) return;
         path += String.valueOf(root.val);
-        if(root.left!=null || root.right!=null) path += "->";
-        
-        if(root.left==null && root.right==null) list.add(path);
+        if(root.left==null && root.right==null){
+            list.add(path);
+        }else{
+            path += "->";
+        }
         
         if(root.left!=null) preorder(root.left, list, path);
         if(root.right!=null) preorder(root.right, list, path);
