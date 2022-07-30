@@ -13,31 +13,20 @@
  *     }
  * }
  */
-class Solution{
-    public Stack<TreeNode> stack = new Stack();
-    public Stack<Integer> lowLimits = new Stack();
-    public Stack<Integer> highLimits = new Stack();
+class Solution {
+    public Integer prev = null;
     
-    public void update(TreeNode root, Integer low, Integer high){
-        stack.push(root);
-        lowLimits.push(low);
-        highLimits.push(high);
+    public boolean isValidBST(TreeNode root) {
+        return inorder(root);
     }
-    
-    public boolean isValidBST(TreeNode root) {    
+    public boolean inorder(TreeNode root){
         if(root==null) return true;
-        Integer low=null, high=null;
-        update(root,low,high);
         
-        while(!stack.isEmpty()){
-            root = stack.pop();
-            low = lowLimits.pop();
-            high = highLimits.pop();
-            
-            if((low != null && root.val <= low) || (high != null && root.val >= high)) return false;
-            if(root.right != null) update(root.right, root.val, high);
-            if(root.left != null) update(root.left, low, root.val);
-        }
-        return true;
+        if(!inorder(root.left)) return false;
+        
+        if(prev != null && root.val <= prev) return false;
+        
+        prev = root.val;
+        return inorder(root.right);
     }
 }
