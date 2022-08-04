@@ -14,24 +14,22 @@
  * }
  */
 class Solution {
-    public String str;
-    public String tree2str(TreeNode root) {
-        str = "";
-        preorder(root);
-        return str;
+     public String tree2str(TreeNode t) {
+        StringBuilder sb = new StringBuilder();
+        helper(sb,t);
+        return sb.toString();
     }
-    public void preorder(TreeNode root){
-        if(root != null){
-            str +=root.val;
-            if(root.left != null || root.right != null){
-                str += "(";
-                preorder(root.left);
-                str += ")";
-                
-                if(root.right != null){
-                    str += "(";
-                    preorder(root.right);
-                    str += ")";
+    public void helper(StringBuilder sb,TreeNode t){
+        if(t!=null){
+            sb.append(t.val);
+            if(t.left!=null||t.right!=null){
+                sb.append("(");
+                helper(sb,t.left);
+                sb.append(")");
+                if(t.right!=null){
+                    sb.append("(");
+                helper(sb,t.right);
+                sb.append(")");
                 }
             }
         }
