@@ -13,35 +13,42 @@
  *     }
  * }
  */
-class Solution {
+public class Solution {
+    private int[] modes;
+    
+    private int currVal;
+    private int currCount = 0;
+    private int maxCount = 0;
+    private int modeCount = 0;
+    
     public int[] findMode(TreeNode root) {
-        Map<Integer, Integer> map = new HashMap();
-        Stack<TreeNode> stack = new Stack();
-        stack.push(root);
+        inorder(root);
         
-        int maxCount = 1;
-        while(!stack.isEmpty()){
-            root = stack.pop();
-            if(map.containsKey(root.val)){
-                int count = map.get(root.val) + 1;
-                maxCount = Math.max(maxCount, count);
-                map.put(root.val, count);
-            }else{
-                map.put(root.val, 1);
-            }
-            
-            if(root.right != null ) stack.push(root.right);
-            if(root.left != null ) stack.push(root.left);
+        modes = new int[modeCount];
+        modeCount = 0;
+        currCount = 0;
+        inorder(root);
+        return modes;
+    }
+    private void handleValue(int val) {
+        if (val != currVal) {
+            currVal = val;
+            currCount = 0;
         }
-        
-        
-        int[] mode = new int[map.size()];
-        int index = 0;
-        for(Integer key : map.keySet()){
-            if(map.get(key) == maxCount){
-                mode[index++] = key;
-            }
+        currCount++;
+        if (currCount > maxCount) {
+            maxCount = currCount;
+            modeCount = 1;
+        } else if (currCount == maxCount) {
+            if (modes != null)
+                modes[modeCount] = currVal;
+            modeCount++;
         }
-        return Arrays.copyOf(mode, index);
+    }
+    private void inorder(TreeNode root) {
+        if (root == null) return;
+        inorder(root.left);
+        handleValue(root.val);
+        inorder(root.right);
     }
 }
