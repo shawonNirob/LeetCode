@@ -14,25 +14,22 @@
  * }
  */
 class Solution {
-  // Recursively obtain the height of a tree. An empty tree has -1 height
-  private int height(TreeNode root) {
-    // An empty tree has height -1
-    if (root == null) {
-      return -1;
+    public boolean isBalanced(TreeNode root) {
+        if(root==null) return true;
+        
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+        
+        int heightDiff = Math.abs(leftHeight -  rightHeight);
+        
+        return heightDiff < 2 && isBalanced(root.left) && isBalanced(root.right);
     }
-    return 1 + Math.max(height(root.left), height(root.right));
-  }
-
-  public boolean isBalanced(TreeNode root) {
-    // An empty tree satisfies the definition of a balanced tree
-    if (root == null) {
-      return true;
+    private int height(TreeNode root){
+        if(root==null) return 0;
+        
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+        
+        return Math.max(leftHeight, rightHeight) +1;
     }
-
-    // Check if subtrees have height within 1. If they do, check if the
-    // subtrees are balanced
-    return Math.abs(height(root.left) - height(root.right)) < 2
-        && isBalanced(root.left)
-        && isBalanced(root.right);
-  }
-};
+}
