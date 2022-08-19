@@ -13,45 +13,25 @@
  *     }
  * }
  */
-// Utility class to store information from recursive calls
-final class TreeInfo {
-  public final int height;
-  public final boolean balanced;
-
-  public TreeInfo(int height, boolean balanced) {
-    this.height = height;
-    this.balanced = balanced;
-  }
-}
-
 class Solution {
-  // Return whether or not the tree at root is balanced while also storing
-  // the tree's height in a reference variable.
-  private TreeInfo isBalancedTreeHelper(TreeNode root) {
-    // An empty tree is balanced and has height = -1
-    if (root == null) {
-      return new TreeInfo(-1, true);
+    private boolean ans;
+    public boolean isBalanced(TreeNode root) {
+        if(root==null) return true;
+        ans = true;
+        heightBalanced(root);
+        if(ans) return true;
+        
+        return false;
     }
-
-    // Check subtrees to see if they are balanced.
-    TreeInfo left = isBalancedTreeHelper(root.left);
-    if (!left.balanced) {
-      return new TreeInfo(-1, false);
+    public int heightBalanced(TreeNode root){
+        if(root==null) return 0;
+        
+        int leftHeight = heightBalanced(root.left);
+        int rightHeight = heightBalanced(root.right);
+        
+        int heightDiff = Math.abs(leftHeight - rightHeight);
+        if(heightDiff > 1) ans = false;
+        
+        return Math.max(leftHeight, rightHeight) + 1;
     }
-    TreeInfo right = isBalancedTreeHelper(root.right);
-    if (!right.balanced) {
-      return new TreeInfo(-1, false);
-    }
-
-    // Use the height obtained from the recursive calls to
-    // determine if the current node is also balanced.
-    if (Math.abs(left.height - right.height) < 2) {
-      return new TreeInfo(Math.max(left.height, right.height) + 1, true);
-    }
-    return new TreeInfo(-1, false);
-  }
-
-  public boolean isBalanced(TreeNode root) {
-    return isBalancedTreeHelper(root).balanced;
-  }
-};
+}
