@@ -18,7 +18,7 @@ class Solution {
    if(root==null){
        return 0;
    }else{
-       return countNodes(root.left) + countNodes(root.right) + 1;
+       return countNodes(root.right) + countNodes(root.left) + 1;
    }
   }
 }
