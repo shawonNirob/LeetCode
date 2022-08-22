@@ -14,9 +14,8 @@
  * }
  */
 class Solution {
-    private  List<List<Integer>> list;
+    private  List<List<Integer>> list = new ArrayList();
     public List<List<Integer>> levelOrder(TreeNode root) {
-        list = new ArrayList();
         helper(root, 0);
         
         return list;
