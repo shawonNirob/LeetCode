@@ -15,10 +15,6 @@
  */
 class Solution {
   public int countNodes(TreeNode root) {
-   if(root==null){
-       return 0;
-   }else{
-       return countNodes(root.right) + countNodes(root.left) + 1;
-   }
+    return root != null ? 1 + countNodes(root.right) + countNodes(root.left) : 0;
   }
 }
