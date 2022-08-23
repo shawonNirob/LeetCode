@@ -14,24 +14,20 @@
  * }
  */
 class Solution {
-    List<Integer> list;
+    private int firstMin;
+    private long secondMin;
     public int findSecondMinimumValue(TreeNode root) {
-        list = new ArrayList();
-        preorder(root, root.val);
-        
-        Collections.sort(list);
-        if(list.size()==0){
-            return -1;
-        }else{
-            return list.get(0);
-        }
+        firstMin = root.val;
+        secondMin = Long.MAX_VALUE;
+        preorder(root);
+        return secondMin == Long.MAX_VALUE ? -1 : (int) secondMin;
     }
-    private void preorder(TreeNode root, int firstMin){
+    private void preorder(TreeNode root){
         if(root==null) return;
-        if(root.val != firstMin){
-            list.add(root.val);
+        if(root.val > firstMin && root.val < secondMin){
+            secondMin = root.val;
         }
-        preorder(root.left, firstMin);
-        preorder(root.right, firstMin);
+        preorder(root.left);
+        preorder(root.right);
     }
 }
