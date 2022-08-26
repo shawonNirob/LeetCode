@@ -15,8 +15,7 @@
  */
 class Solution {
     public TreeNode constructMaximumBinaryTree(int[] nums) {
-        TreeNode root = constructBT(nums, 0, nums.length-1);
-        return root;
+        return constructBT(nums, 0, nums.length-1);
     }
     private TreeNode constructBT(int[] nums, int left, int right){
         if(left>right) return null;
@@ -27,14 +26,12 @@ class Solution {
         return root;
     }
     private int findMax(int[] nums, int left, int right){
-        int max = -1; 
-        int maxIndex = 0;
+        int max = left ; 
         for(int i=left; i<=right; i++){
-            if(nums[i] > max){
-                max = nums[i];
-                maxIndex = i;
+            if(nums[i] > nums[max]){
+                max = i;
             } 
         }
-        return maxIndex;
+        return max;
     }
 }
