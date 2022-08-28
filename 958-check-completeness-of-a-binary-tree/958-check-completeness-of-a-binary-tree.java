@@ -22,18 +22,18 @@ class Solution {
         while(!queue.isEmpty()){
                 root = queue.poll();
                 if(root == null){
-                    while(!queue.isEmpty()){
-                        root = queue.poll();
-                        if(root != null){
-                            ans = false;
-                            break;
-                        }
-                    }
+                    break;
                 }else{
                     queue.add(root.left);
                     queue.add(root.right);
                 }
             }
-        return ans;
+        while(!queue.isEmpty()){
+            root = queue.poll();
+            if(root != null){
+                return false;
+            }
+        }
+        return true;
     }
 }
