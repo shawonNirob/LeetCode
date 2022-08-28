@@ -18,15 +18,15 @@ class Solution {
         Queue<TreeNode> queue = new LinkedList();
         queue.add(root);
         
+        boolean ans = true;
         while(!queue.isEmpty()){
-            int size = queue.size();
-            for(int i=0; i<size; i++){
                 root = queue.poll();
                 if(root == null){
                     while(!queue.isEmpty()){
                         root = queue.poll();
                         if(root != null){
-                            return false;
+                            ans = false;
+                            break;
                         }
                     }
                 }else{
@@ -34,7 +34,6 @@ class Solution {
                     queue.add(root.right);
                 }
             }
-        }
-        return true;
+        return ans;
     }
 }
