@@ -19,21 +19,18 @@ class Solution {
         List<Integer> list = new ArrayList();
         helper(root, list);
         size = list.size();
-        
-        return BST(list, 0);
+        root = new TreeNode(list.get(0)); 
+        TreeNode curr = root;
+        for(int i=1; i<size; i++){
+            curr.right = new TreeNode(list.get(i));
+            curr = curr.right;
+        }
+        return root;
     }
     public void helper(TreeNode root, List<Integer> list){
         if(root==null) return;
         helper(root.left, list);
         list.add(root.val);
         helper(root.right, list);
-    }
-    private TreeNode BST(List<Integer> list, int index){
-        if(index==size) return null;
-        TreeNode root = new TreeNode(list.get(index));
-        index += 1;
-        root.right = BST(list, index);
-        
-        return root;
     }
 }
