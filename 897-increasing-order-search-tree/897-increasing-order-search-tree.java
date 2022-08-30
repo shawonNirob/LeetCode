@@ -14,23 +14,21 @@
  * }
  */
 class Solution {
-    private int size;
+    public TreeNode curr;
     public TreeNode increasingBST(TreeNode root){
-        List<Integer> list = new ArrayList();
-        helper(root, list);
-        size = list.size();
-        root = new TreeNode(list.get(0)); 
-        TreeNode curr = root;
-        for(int i=1; i<size; i++){
-            curr.right = new TreeNode(list.get(i));
-            curr = curr.right;
-        }
-        return root;
+        TreeNode node = new TreeNode(-1);
+        curr = node;
+        helper(root);
+        return node.right;
     }
-    public void helper(TreeNode root, List<Integer> list){
+    public void helper(TreeNode root){
         if(root==null) return;
-        helper(root.left, list);
-        list.add(root.val);
-        helper(root.right, list);
+        helper(root.left);
+        
+        root.left = null;
+        curr.right = root;
+        curr = curr.right;
+        
+        helper(root.right);
     }
 }
