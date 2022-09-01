@@ -14,14 +14,18 @@
  * }
  */
 class Solution {
-     int preIndex = 0, posIndex = 0;
-    public TreeNode constructFromPrePost(int[]pre, int[]post) {
-        TreeNode root = new TreeNode(pre[preIndex++]);
-        if (root.val != post[posIndex])
-            root.left = constructFromPrePost(pre, post);
-        if (root.val != post[posIndex])
-            root.right = constructFromPrePost(pre, post);
-        posIndex++;
+    private int preIndex = 0, postIndex = 0;
+    public TreeNode constructFromPrePost(int[] preorder, int[] postorder) {
+        TreeNode root = new TreeNode(preorder[preIndex]);
+        preIndex += 1;
+        if(root.val != postorder[postIndex]){
+            root.left = constructFromPrePost(preorder, postorder);
+        }
+        if(root.val != postorder[postIndex]){
+            root.right = constructFromPrePost(preorder, postorder);
+        }
+        postIndex += 1;
+        
         return root;
     }
 }
