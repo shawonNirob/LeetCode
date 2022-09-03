@@ -1,14 +1,16 @@
 class Solution {
     public int fib(int n) {
-        Map<Integer, Integer> map = new HashMap();
-        
-        map.put(0, 0);
-        map.put(1, 1);
+        int prev = 0;
+        int next = 1;
+        int current = prev;
         
         for(int i=2; i<=n; i++){
-            map.put(i, map.get(i-1)+ map.get(i-2));
+            current = prev + next;
+            
+            prev = next;
+            next = current;
         }
         
-        return map.get(n);
+        return n==0 ? current : next;
     }
 }
