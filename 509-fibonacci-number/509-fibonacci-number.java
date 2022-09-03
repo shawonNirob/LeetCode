@@ -1,17 +1,13 @@
 class Solution {
-    Map<Integer, Integer> map;
     public int fib(int n) {
-        map = new HashMap();
+        Map<Integer, Integer> map = new HashMap();
         
-        return dpFib(n);
+        map.put(0, 0);
+        map.put(1, 1);
         
-    }
-    private int dpFib(int n){
-        if(n==0) return 0;
-        if(n==1) return 1;
-        if(map.containsKey(n)) return map.get(n);
-        
-        map.put(n, dpFib(n-1) + dpFib(n-2));
+        for(int i=2; i<=n; i++){
+            map.put(i, map.get(i-1)+ map.get(i-2));
+        }
         
         return map.get(n);
     }
