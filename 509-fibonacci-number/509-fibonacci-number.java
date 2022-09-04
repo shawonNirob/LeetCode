@@ -1,16 +1,8 @@
 class Solution {
     public int fib(int n) {
-        int prev = 0;
-        int next = 1;
-        int current = prev;
+        double goldenRatio = (1 + Math.sqrt(5))/2;
+        double fib = Math.round((Math.pow(goldenRatio, n))/Math.sqrt(5));
         
-        for(int i=2; i<=n; i++){
-            current = prev + next;
-            
-            prev = next;
-            next = current;
-        }
-        
-        return n==0 ? current : next;
+        return (int) fib;
     }
 }
