@@ -11,13 +11,13 @@
 class Solution {
     private TreeNode ans;
     public final TreeNode getTargetCopy(final TreeNode original, final TreeNode cloned, final TreeNode target) {
-        helper(cloned, target);
+        helper(original, cloned, target);
         return ans;
     }
-    public void helper(TreeNode root, TreeNode target){
-        if(root.val == target.val) ans = root;
+    public void helper(TreeNode original, TreeNode root, TreeNode target){
+        if(original == target) ans = root;
         
-        if(root.left != null) helper(root.left, target);
-        if(root.right != null) helper(root.right, target);
+        if(root.left != null) helper(original.left, root.left, target);
+        if(root.right != null) helper(original.right, root.right, target);
     }
 }
