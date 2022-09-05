@@ -15,8 +15,10 @@ class Solution {
         return ans;
     }
     public void helper(TreeNode original, TreeNode root, TreeNode target){
-        if(original == target) ans = root;
-        
+        if(original == target) {
+            ans = root;
+            return;
+        }
         if(original.left != null) helper(original.left, root.left, target);
         if(original.right != null) helper(original.right, root.right, target);
     }
