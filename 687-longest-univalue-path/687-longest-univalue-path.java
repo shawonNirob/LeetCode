@@ -13,25 +13,19 @@
  *     }
  * }
  */
-class Solution {
-    int ans;
-    public int longestUnivaluePath(TreeNode root) {
-        ans = 0;
-        arrowLength(root);
-        return ans;
+class Solution{
+    private int path =0 ;
+    public int longestUnivaluePath(TreeNode root){
+        if(root==null) return 0;
+        length(root, root.val);
+        return path;
     }
-    public int arrowLength(TreeNode node) {
-        if (node == null) return 0;
-        int left = arrowLength(node.left);
-        int right = arrowLength(node.right);
-        int arrowLeft = 0, arrowRight = 0;
-        if (node.left != null && node.left.val == node.val) {
-            arrowLeft += left + 1;
-        }
-        if (node.right != null && node.right.val == node.val) {
-            arrowRight += right + 1;
-        }
-        ans = Math.max(ans, arrowLeft + arrowRight);
-        return Math.max(arrowLeft, arrowRight);
-    }
+    public int length(TreeNode root, int val){
+        if(root==null) return 0;
+        int left = length(root.left, root.val);
+        int right = length(root.right, root.val);
+        path = Math.max(path, left+right);
+        if(val == root.val) return Math.max(left, right) + 1;
+        return 0;
+    } 
 }
