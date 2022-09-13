@@ -41,7 +41,7 @@ public class Codec {
         list.remove(0);
         root.left = createTree(list);
         root.right = createTree(list);
-        
+
         return root;
     }
 }
