@@ -9,21 +9,21 @@
  */
 public class Codec {
     // Encodes a tree to a single string.
+    String ser;
     public String serialize(TreeNode root) {
-        //String ser = "";
-        //helper(root, ser);
-        return helper(root, "");
+        ser = "";
+        helper(root);
+        return ser;
     }
-    public String helper(TreeNode root, String ser){
+    public void helper(TreeNode root){
         if(root==null){
             ser += "#,";
-            return ser;
+            return;
         }
         ser += String.valueOf(root.val) + ",";
-        ser = helper(root.left, ser);
-        ser = helper(root.right, ser);
-        
-        return ser;
+        helper(root.left);
+        helper(root.right);
+ 
     }
 
     // Decodes your encoded data to tree.
