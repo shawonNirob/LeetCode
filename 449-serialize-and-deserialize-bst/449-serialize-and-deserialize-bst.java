@@ -28,16 +28,19 @@ public class Codec {
     public TreeNode deserialize(String data) {
         if(data.length()==0) return null;
         String[] arr = data.split(",");
-        List<String> list = new ArrayList<String>(Arrays.asList(arr));
-        return createTree(list, -1, 10001);
+        Deque<Integer> deque = new ArrayDeque();
+        for(String s: data.split(",")){
+            deque.add(Integer.parseInt(s));
+        }
+        return createTree(deque, -1, 10001);
     }
-    public TreeNode createTree(List<String> list, int min, int max){
-        if(!list.isEmpty() && min < Integer.valueOf(list.get(list.size()-1)) && max > Integer.valueOf(list.get(list.size()-1))){
-            TreeNode root = new TreeNode(Integer.valueOf(list.get(list.size()-1)));
+    public TreeNode createTree(Deque<Integer> deque, int min, int max){
+        if(!deque.isEmpty() && min < deque.getLast()  && max >deque.getLast() ){
+            TreeNode root = new TreeNode(deque.getLast());
             
-            list.remove(list.size()-1);
-            root.right = createTree(list, root.val, max);
-            root.left = createTree(list, min, root.val);
+            deque.removeLast();
+            root.right = createTree(deque, root.val, max);
+            root.left = createTree(deque, min, root.val);
             
             return root;
         }else{           
