@@ -29,7 +29,7 @@ public class Codec {
     public TreeNode deserialize(String data) {
         if(data.length()==0) return null;
         String[] arr = data.split(",");
-        List<String> list = new LinkedList<String>(Arrays.asList(arr));
+        List<String> list = new ArrayList<String>(Arrays.asList(arr));
         return createTree(list, -1, 10001);
     }
     public TreeNode createTree(List<String> list, int min, int max){
