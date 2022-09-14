@@ -27,20 +27,20 @@ public class Codec {
     }
 
     // Decodes your encoded data to tree.
+    int index = 0;
     public TreeNode deserialize(String data) {
         String[] arr = data.split(",");
-        List<String> list = new LinkedList<String>(Arrays.asList(arr));
-        return createTree(list);
+        return createTree(arr);
     }
-    public TreeNode createTree(List<String> list){
-        if(list.get(0).equals("#")){
-            list.remove(0);
+    public TreeNode createTree(String[] arr){
+        if(arr[index].equals("#")){
+            index++;
             return null;
         }
-        TreeNode root = new TreeNode(Integer.valueOf(list.get(0)));
-        list.remove(0);
-        root.left = createTree(list);
-        root.right = createTree(list);
+        TreeNode root = new TreeNode(Integer.valueOf(arr[index]));
+        index++;
+        root.left = createTree(arr);
+        root.right = createTree(arr);
 
         return root;
     }
