@@ -17,7 +17,6 @@ public class Codec {
     }
     public void helper(TreeNode root){
         if(root==null){
-            ser += "#,";
             return;
         }
         ser += String.valueOf(root.val) + ",";
@@ -27,22 +26,24 @@ public class Codec {
     }
 
     // Decodes your encoded data to tree.
-    int index = 0;
+    int index;
     public TreeNode deserialize(String data) {
+        if(data.length()==0) return null;
         String[] arr = data.split(",");
-        return createTree(arr);
+        index = 0;
+        return createTree(arr, -1, 10001);
     }
-    public TreeNode createTree(String[] arr){
-        if(arr[index].equals("#")){
-            index++;
+    public TreeNode createTree(String[] arr, int min, int max){
+        if(index < arr.length && min < Integer.valueOf(arr[index]) && max > Integer.valueOf(arr[index])){
+            TreeNode root = new TreeNode(Integer.valueOf(arr[index++]));
+            
+            root.left = createTree(arr, min, root.val);
+            root.right = createTree(arr, root.val, max);
+            
+            return root;
+        }else{           
             return null;
         }
-        TreeNode root = new TreeNode(Integer.valueOf(arr[index]));
-        index++;
-        root.left = createTree(arr);
-        root.right = createTree(arr);
-
-        return root;
     }
 }
 
