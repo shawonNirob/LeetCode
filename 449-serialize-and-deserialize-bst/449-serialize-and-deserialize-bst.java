@@ -26,19 +26,19 @@ public class Codec {
     }
 
     // Decodes your encoded data to tree.
-    int index;
     public TreeNode deserialize(String data) {
         if(data.length()==0) return null;
         String[] arr = data.split(",");
-        index = 0;
-        return createTree(arr, -1, 10001);
+        List<String> list = new LinkedList<String>(Arrays.asList(arr));
+        return createTree(list, -1, 10001);
     }
-    public TreeNode createTree(String[] arr, int min, int max){
-        if(index < arr.length && min < Integer.valueOf(arr[index]) && max > Integer.valueOf(arr[index])){
-            TreeNode root = new TreeNode(Integer.valueOf(arr[index++]));
+    public TreeNode createTree(List<String> list, int min, int max){
+        if(!list.isEmpty() && min < Integer.valueOf(list.get(0)) && max > Integer.valueOf(list.get(0))){
+            TreeNode root = new TreeNode(Integer.valueOf(list.get(0)));
             
-            root.left = createTree(arr, min, root.val);
-            root.right = createTree(arr, root.val, max);
+            list.remove(0);
+            root.left = createTree(list, min, root.val);
+            root.right = createTree(list, root.val, max);
             
             return root;
         }else{           
