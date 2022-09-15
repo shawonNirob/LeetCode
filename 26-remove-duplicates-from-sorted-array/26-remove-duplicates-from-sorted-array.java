@@ -2,12 +2,11 @@ class Solution {
     public int removeDuplicates(int[] nums) {
         int index = 0, pointer= 0;
         while(index < nums.length){
-            while(index < nums.length && nums[pointer] == nums[index]){
-                index++;
-            }
-            if(index < nums.length){
+            if(nums[pointer] != nums[index]){
                 pointer++;
-                nums[pointer] = nums[index];                
+                nums[pointer] = nums[index];
+            }else{
+                index++;
             }
         }
         return pointer+1;
