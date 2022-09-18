@@ -20,9 +20,9 @@ class Solution{
         List<Integer> list = new ArrayList();
         
         int max = (Collections.max(map.values()));
-        for(Map.Entry<Integer, Integer> entry : map.entrySet()){
-            if(entry.getValue() == max){
-                list.add(entry.getKey());
+        for(int key : map.keySet()){
+            if(map.get(key) == max){
+                list.add(key);
             }
         }
         
