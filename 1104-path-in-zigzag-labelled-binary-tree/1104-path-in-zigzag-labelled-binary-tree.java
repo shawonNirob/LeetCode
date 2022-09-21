@@ -1,18 +1,22 @@
 class Solution {
     public List<Integer> pathInZigZagTree(int label) {
-        List<Integer> result = new LinkedList<>();
-        if(label <= 0)
-            return result;
-        int level = 0;
-        while(Math.pow(2, level) - 1 < label)   level++;        
-        level--; // calculate the depth, 0 indexed, 0 is odd
-        while(level != 0) {
-            result.add(0, label);
-            int pos = label - (int) Math.pow(2, level); // calculate the position, 0 indexed  
-            label = label - (pos + 1) - pos / 2;
-            level--;
+        List<Integer> list = new LinkedList<>();
+        
+        while(label >= 1){
+            list.add(0,label);
+            
+            int llv = 0, n = 1;
+            while(n <= label){
+                llv = n;
+                n = 2*n;
+            }
+            int start = llv;
+            int end = 2*llv - 1;
+            
+            int val = start + end -label;
+            label = val/2;
         }
-        result.add(0, 1);
-        return result;
+        
+        return list;
     }
 }
