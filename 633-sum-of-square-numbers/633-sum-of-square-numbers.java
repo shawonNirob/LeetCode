@@ -5,10 +5,8 @@ class Solution {
 
         
         for(int a=0; a<=sqrtC; a++){
-            double p = c - a*a;
-            double value = Math.sqrt(p);
-            int b = (int)value;
-            if(a*a + b*b == c) return true;
+            double b = Math.sqrt(c - a*a);
+            if(b == (int)b) return true;
         }
         return false;
     }
