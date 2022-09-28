@@ -1,18 +1,19 @@
 class Solution {
+    List<List<Integer>> list = new ArrayList();
     public List<List<Integer>> subsets(int[] nums) {
-       
-    List<List<Integer>> list = new ArrayList<>();
-        Arrays.sort(nums);
-        backtrack(list, new ArrayList<>(), nums, 0);
+        LinkedList<Integer> l = new LinkedList();
+        int n = nums.length;
+        helper(0, nums, l, n);
         return list;
     }
-
-        private void backtrack(List<List<Integer>> list , List<Integer> tempList, int [] nums, int start){
-            list.add(new ArrayList<>(tempList));
-            for(int i = start; i < nums.length; i++){
-                tempList.add(nums[i]);
-                backtrack(list, tempList, nums, i + 1);
-                tempList.remove(tempList.size() - 1);
-                }
+    public void helper(int index, int[] nums, LinkedList<Integer> l, int n){
+        if(index >= n){
+            list.add(new LinkedList<>(l));
+            return;
         }
+        l.add(nums[index]);
+        helper(index+1, nums, l, n);
+        l.removeLast();
+        helper(index+1, nums, l, n);
+    }
 }
