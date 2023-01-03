@@ -5,7 +5,7 @@ class Solution {
         return image;
     }
     public void dfs(int oldcolor, int color, int row, int col, int[][] image, int m, int n){
-        if(row < 0 || col < 0 || row >= m || col >= n || image[row][col] != oldcolor) return;
+        //if(row < 0 || col < 0 || row >= m || col >= n || image[row][col] != oldcolor) return;
         image[row][col] = color;
             
         //downward
