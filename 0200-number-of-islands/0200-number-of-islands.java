@@ -2,11 +2,6 @@ class Solution {
     public int numIslands(char[][] grid) {
         int island = 0;
         boolean[][] isVisited = new boolean[grid.length][grid[0].length];
-        for(int i= 0; i<grid.length; i++){
-            for(int j=0; j<grid[0].length; j++){
-                isVisited[i][j] = false;
-            }
-        }
         
         for(int i= 0; i<grid.length; i++){
             for(int j=0; j<grid[0].length; j++){
