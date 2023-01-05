@@ -6,9 +6,7 @@ class Solution {
         for(int i=0; i<grid.length; i++){
             for(int j=0; j<grid[0].length; j++){
                 if(!isVisited[i][j] && grid[i][j]== 1){
-                    int area = 0;
-                    area = dfs(i,j,grid,isVisited,grid.length,grid[0].length);
-                    maxArea = Math.max(maxArea, area);
+                    maxArea = Math.max(maxArea, dfs(i,j,grid,isVisited,grid.length,grid[0].length));
                 }
             }
         }
