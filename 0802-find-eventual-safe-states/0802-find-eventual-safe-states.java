@@ -1,28 +1,34 @@
 class Solution {
-    public List<Integer> eventualSafeNodes(int[][] graph) {
-        int N = graph.length;
-        int[] color = new int[N];
-        List<Integer> ans = new ArrayList();
-
-        for (int i = 0; i < N; ++i)
-            if (dfs(i, color, graph))
-                ans.add(i);
-        return ans;
+    public List<Integer> eventualSafeNodes(int[][] graph){
+        //0 = unknown
+        //1 = unsafe
+        //2 = safe
+        
+        int n = graph.length;
+        List<Integer> list = new ArrayList();
+        int[] color = new int[n];
+        
+        for(int i=0; i<n; i++){
+            if(dfs(i, graph, color))
+                list.add(i);
+        }
+        
+        return list;
     }
-
-    // colors: WHITE 0, GRAY 1, BLACK 2;
-    public boolean dfs(int node, int[] color, int[][] graph) {
-        if (color[node] > 0)
-            return color[node] == 2;
-
+    public boolean dfs(int node, int[][] graph, int[] color){
+        if(color[node] > 0)
+            return color[node]==2;
+        
         color[node] = 1;
-        for (int nei: graph[node]) {
-            if (color[nei] == 2)
+        
+        for(int x : graph[node]){
+            if(color[x]==1)
+                return false;
+            if(color[x]==2)
                 continue;
-            if (color[nei] == 1 || !dfs(nei, color, graph))
+            if(!dfs(x, graph, color))
                 return false;
         }
-
         color[node] = 2;
         return true;
     }
