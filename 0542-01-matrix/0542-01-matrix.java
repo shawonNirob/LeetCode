@@ -24,19 +24,16 @@ class Solution {
         
         while(!queue.isEmpty()){
             Triple pointer = queue.poll();
-            int row = pointer.row;
-            int col = pointer.col;
-            int dist = pointer.dist;
-            
+          
             for(int i=0; i<4; i++){
-                int r = row + rowPoint[i];
-                int c = col + colPoint[i];
+                int row = pointer.row + rowPoint[i];
+                int col = pointer.col + colPoint[i];
                 
-                if(r>=0 && r<m && c>=0 && c<n && !visited[r][c]){
-                    int d = dist + 1;
-                    distance[r][c] = d;
-                    visited[r][c] = true;
-                    queue.add(new Triple(r, c, d));
+                if(row>=0 && row<m && col>=0 && col<n && !visited[row][col]){
+                    int dist = pointer.dist + 1;
+                    distance[row][col] = dist;
+                    visited[row][col] = true;
+                    queue.add(new Triple(row, col, dist));
                 }
             }
         }
