@@ -37,7 +37,7 @@ class Solution {
             parrent[rootX] = rootY;
         }else{
             parrent[rootY] = rootX;
-            rootX++;
+            rank[rootX]++;
         }
     }
     
