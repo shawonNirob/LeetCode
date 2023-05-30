@@ -1,31 +1,51 @@
 class Solution {
-    public int findCircleNum(int[][] isConnected) {
+    public int findCircleNum(int[][] isConnected){
         int n = isConnected.length;
-        boolean[] visited = new boolean[n];
-        int provinces =0;
+        int[] parrent = new int[n];
+        int[] rank = new int[n];
         
+        //initialize the parrent
         for(int i=0; i<n; i++){
-            if(!visited[i]){
-                provinces++;
-                bfs(i, isConnected, visited);
-            }
+            parrent[i] = i;
         }
-        return provinces;
-    }
-    public void bfs(int node, int[][] isConnected, boolean[] visited){
-        Queue<Integer> q = new LinkedList<>();
-        q.add(node);
-        visited[node] = true;
         
-        while(!q.isEmpty()){
-            node = q.poll();
-            
-            for(int i=0; i<isConnected.length; i++){
-                if(isConnected[node][i] == 1 && !visited[i]){
-                    q.add(i);
-                    visited[node] = true;
+        //call the union
+        for(int i=0; i<n; i++){
+            for(int j=0; j<isConnected[0].length; j++){
+                if(isConnected[i][j] == 1){
+                    unionByRank(i, j, parrent, rank);
                 }
             }
+        }
+        
+        
+        int provinces = 0;
+        for(int i=0; i<n; i++){
+            if(parrent[i]==i) provinces++;
+        }
+        
+        return provinces;
+    }
+    
+    public void unionByRank(int x, int y,int[] parrent, int[] rank){
+        int rootX = find(x, parrent);
+        int rootY = find(y, parrent);
+        
+        if(rank[rootX] > rank[rootY]){
+            parrent[rootY] = rootX;
+        }else if(rank[rootX] < rank[rootY]){
+            parrent[rootX] = rootY;
+        }else{
+            parrent[rootY] = rootX;
+            rootX++;
+        }
+    }
+    
+    public int find(int u, int[] parrent){
+        if(parrent[u] == u){
+            return u;
+        }else{
+            return parrent[u] = find(parrent[u], parrent);
         }
     }
 }
