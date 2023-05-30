@@ -15,6 +15,7 @@ class Solution {
     public void bfs(int node, int[][] isConnected, boolean[] visited){
         Queue<Integer> q = new LinkedList<>();
         q.add(node);
+        visited[node] = true;
         
         while(!q.isEmpty()){
             node = q.poll();
