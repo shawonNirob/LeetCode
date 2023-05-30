@@ -2,23 +2,24 @@ class Solution {
     public int findCircleNum(int[][] isConnected){
         int n = isConnected.length;
         int[] parrent = new int[n];
-        int[] rank = new int[n];
+        int[] size = new int[n];
         
         //initialize the parrent
         for(int i=0; i<n; i++){
             parrent[i] = i;
+            size[i] = 1;
         }
         
         //call the union
         for(int i=0; i<n; i++){
             for(int j=0; j<isConnected[0].length; j++){
                 if(isConnected[i][j] == 1){
-                    unionByRank(i, j, parrent, rank);
+                    unionBySize(i, j, parrent, size);
                 }
             }
         }
         
-        
+        //find the ultimate parrent
         int provinces = 0;
         for(int i=0; i<n; i++){
             if(parrent[i]==i) provinces++;
@@ -27,17 +28,21 @@ class Solution {
         return provinces;
     }
     
-    public void unionByRank(int x, int y,int[] parrent, int[] rank){
+    public void unionBySize(int x, int y,int[] parrent, int[] size){
         int rootX = find(x, parrent);
         int rootY = find(y, parrent);
         
-        if(rank[rootX] > rank[rootY]){
+        if(size[rootX] > size[rootY]){
             parrent[rootY] = rootX;
-        }else if(rank[rootX] < rank[rootY]){
+            size[rootX] += size[rootY];
+            
+        }else if(size[rootX] < size[rootY]){
             parrent[rootX] = rootY;
+            size[rootX] += size[rootY];
+            
         }else{
             parrent[rootY] = rootX;
-            rank[rootX]++;
+             size[rootX] += size[rootY];
         }
     }
     
