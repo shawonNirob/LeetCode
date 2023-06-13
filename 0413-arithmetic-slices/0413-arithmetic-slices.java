@@ -1,18 +1,19 @@
 class Solution {
-    public int numberOfArithmeticSlices(int[] A) {
-        int n = A.length;
-		if(n <= 2) return 0;
-		int dp=0;
+    public int numberOfArithmeticSlices(int[] nums) {
+        int n = nums.length;
+		if(n < 3) return 0;
 		
-		int res = 0;
-		for(int i=2; i<n; ++i){
-			if(A[i]-A[i-1] == A[i-1]-A[i-2])
-				++dp;
-			else
-				dp=0;
-			res += dp;
-		}
-		
+        int res = 0;
+        int dp =0;
+        
+        for(int i=2; i<n; i++){
+            if(nums[i]-nums[i-1] == nums[i-1]-nums[i-2]){
+                dp++;
+            }else{
+                dp=0;
+            }
+            res += dp;
+        }
 		return res;
     }
 }
