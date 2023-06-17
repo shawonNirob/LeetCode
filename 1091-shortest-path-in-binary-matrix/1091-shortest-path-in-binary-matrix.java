@@ -5,7 +5,7 @@ class Solution {
         boolean[][] distance = new boolean[n][n];
         Queue<Triple> queue = new LinkedList();
         
-        queue.add(new Triple(1, 0, 0));
+        queue.add(new Triple(0, 0, 0));
         
         distance[0][0] = true;
         
@@ -14,7 +14,7 @@ class Solution {
         
         while(!queue.isEmpty()){
             Triple pointer = queue.poll();
-            if(pointer.row==n-1 && pointer.col==n-1) return pointer.dist;
+            if(pointer.row==n-1 && pointer.col==n-1) return pointer.dist+1;
             
             for(int i=0; i<8; i++){
                 int row = pointer.row+rowArr[i];
