@@ -13,8 +13,8 @@ class Solution {
         
         // Create a queue which stores the node and their distances from the
         // source in the form of {stops, {node, dist}} with ‘stops’ indicating 
-        // the no. of nodes between src and current node.
-        Queue<Tuple> q = new LinkedList<>(); 
+        // the no. of nodes between src and current node
+        PriorityQueue<Tuple> q = new PriorityQueue<>(Comparator.comparingInt(Tuple -> Tuple.first));
         
         q.add(new Tuple(0, src, 0));
 
@@ -42,7 +42,7 @@ class Solution {
                 
                 // We only update the queue if the new calculated dist is
                 // less than the prev and the stops are also within limits.
-                if (cost + edW < dist[adjNode] && stops <= K) {
+                if (cost + edW < dist[adjNode]) {
                     dist[adjNode] = cost + edW; 
                     q.add(new Tuple(stops + 1, adjNode, cost + edW)); 
                 }
