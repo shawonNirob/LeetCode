@@ -1,72 +1,63 @@
-class Solution {
-    public int findCheapestPrice(int n, int[][] flights, int src, int dst, int K) {
-        // Create the adjacency list to depict airports and flights in
-        // the form of a graph.
-        ArrayList<ArrayList<Pair>> adj = new ArrayList<>(); 
-        for(int i = 0;i<n;i++) {
-            adj.add(new ArrayList<>()); 
-        }
-        int m = flights.length; 
-        for(int i = 0;i<m;i++) {
-            adj.get(flights[i][0]).add(new Pair(flights[i][1], flights[i][2])); 
+class Solution{
+    public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k){
+        List<List<Pair>> adj = new ArrayList();
+        
+        for(int i=0; i<n; i++){
+            adj.add(new ArrayList());
         }
         
-        // Create a queue which stores the node and their distances from the
-        // source in the form of {stops, {node, dist}} with ‘stops’ indicating 
-        // the no. of nodes between src and current node
-        PriorityQueue<Tuple> q = new PriorityQueue<>(Comparator.comparingInt(Tuple -> Tuple.first));
-        
-        q.add(new Tuple(0, src, 0));
-
-        // Distance array to store the updated distances from the source. 
-        int[] dist = new int[n]; 
-        for(int i = 0;i<n;i++) {
-            dist[i] = (int)(1e9); 
+        int m = flights.length;
+        for(int i=0; i<m; i++){
+            adj.get(flights[i][0]).add(new Pair(flights[i][1], flights[i][2]));
         }
-        dist[src] = 0; 
-
-        // Iterate through the graph using a queue like in Dijkstra with 
-        // popping out the element with min stops first.
-        while(!q.isEmpty()) {
-            Tuple it = q.peek(); 
-            q.remove(); 
-            int stops = it.first; 
-            int node = it.second; 
-            int cost = it.third; 
+        
+        int[] distance = new int[n];
+        Arrays.fill(distance, Integer.MAX_VALUE);
+        distance[src] = 0;
+        
+        PriorityQueue<Triple> q = new PriorityQueue<>(Comparator.comparingInt(Triple -> Triple.stops));
+        q.add(new Triple(0, src, 0));
+        
+        while(!q.isEmpty()){
+            Triple pointer = q.poll();
+            int stops = pointer.stops;
+            int u = pointer.node;
+            int dist = pointer.dist;
             
-            // We stop the process as soon as the limit for the stops reaches.
-            if(stops > K) continue; 
-            for(Pair iter: adj.get(node)) {
-                int adjNode = iter.first; 
-                int edW = iter.second; 
+            //if(dist > distance[u]) continue;
+            
+            if(stops > k) continue;
+            for(Pair point : adj.get(u)){
+                int v = point.dest;
+                int costUV = point.weight;
                 
-                // We only update the queue if the new calculated dist is
-                // less than the prev and the stops are also within limits.
-                if (cost + edW < dist[adjNode]) {
-                    dist[adjNode] = cost + edW; 
-                    q.add(new Tuple(stops + 1, adjNode, cost + edW)); 
+                if(dist + costUV < distance[v]){
+                    distance[v] = dist + costUV;
+                     q.add(new Triple(stops+1, v, distance[v]));
                 }
             }
         }
-        // If the destination node is unreachable return ‘-1’
-        // else return the calculated dist from src to dst.
-        if(dist[dst] == (int)(1e9)) return -1; 
-        return dist[dst]; 
+        
+        if(distance[dst] == Integer.MAX_VALUE) return -1;
+        return distance[dst];
+        
     }
 }
 class Pair{
-    int first;
-    int second;
-    public Pair(int first,int second){
-        this.first = first;
-        this.second = second;
+    int dest;
+    int weight;
+    public Pair(int dest, int weight){
+        this.dest = dest;
+        this.weight = weight;
     }
 }
-class Tuple {
-    int first, second, third; 
-    Tuple(int first, int second, int third) {
-        this.first = first; 
-        this.second = second;
-        this.third = third; 
+class Triple{
+    int stops;
+    int node;
+    int dist;
+    public Triple(int stops, int node, int dist){
+        this.stops = stops;
+        this.node = node;
+        this.dist = dist;
     }
 }
