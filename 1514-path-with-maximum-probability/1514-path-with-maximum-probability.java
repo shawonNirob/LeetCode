@@ -22,7 +22,8 @@ class Solution {
             Pair pointer = q.poll();
             int u = pointer.dest;
             double dist = pointer.prob;
-            //if(dist < distance[u]) continue;
+            
+            if(dist < distance[u]) continue;
             
             for(Pair next : adj.get(u)){
                 int v = next.dest;
