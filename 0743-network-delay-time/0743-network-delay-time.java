@@ -13,7 +13,6 @@ class Solution {
         int[] distance = new int[n+1];
         Arrays.fill(distance, Integer.MAX_VALUE);
         distance[k] = 0;
-        distance[0] = 0;
         
         PriorityQueue<Pair> q = new PriorityQueue<>(Comparator.comparingInt(Pair -> Pair.time));
         q.add(new Pair(k,0));
@@ -36,7 +35,10 @@ class Solution {
             }
         }
         
-        int max = Arrays.stream(distance).max().getAsInt();
+        int max = distance[1];
+        for(int i=2; i<distance.length; i++){
+            max = Math.max(distance[i], max);
+        }
         
         if(max == Integer.MAX_VALUE) return -1;
         else return max;
