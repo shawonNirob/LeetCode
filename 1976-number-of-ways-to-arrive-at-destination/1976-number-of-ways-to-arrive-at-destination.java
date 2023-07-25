@@ -37,7 +37,7 @@ class Solution {
                 if(dist + costUV < distance[v]){
                     distance[v] = dist + costUV;
                     ways[v] = ways[u];
-                    q.add(new Pair(v,dist + costUV));
+                    q.add(new Pair(v, distance[v]));
                 }
                 else if(dist + costUV == distance[v]){
                     ways[v] = (ways[v]+ ways[u]) % mod;
