@@ -31,13 +31,12 @@ class Solution {
             for(int j=0; j<n; j++){
                 if(distance[i][j] <= distanceThreshold) tempCity++;
             }
-            if(city == tempCity){
-                resultantCity = Math.max(resultantCity, i);
-            }else if(city > tempCity){
+            if(tempCity <= city){
                 city = tempCity;
                 resultantCity = i;
             }
         }
+        
         return resultantCity;
     }
 }
