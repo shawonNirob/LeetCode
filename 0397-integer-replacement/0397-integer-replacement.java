@@ -7,16 +7,13 @@ class Solution {
         if(n==1) return 0;
         if(map.containsKey(n)) return map.get(n);
         
+        int step;
         if(n%2==0){
-            int step = 1+findMin(n/2);
-            map.put(n, step);
-            return step;
+            step = 1 + findMin(n/2);
         }else{
-            int opt1 = 1+findMin(n+1);
-            int opt2 = 1+findMin(n-1);
-            int step = Math.min(opt1, opt2);
-            map.put(n, step);
-            return step;
+            step = 1 + Math.min(findMin(n+1), findMin(n-1));
         }
+        map.put(n, step);
+        return step;
     }
 }
