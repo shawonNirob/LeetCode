@@ -1,13 +1,5 @@
 class Solution {
-    public String reverseOnlyLetters(String s) {
-        Set<Character> aschii = new HashSet();
-        for(int i=65; i<=90; i++){
-            aschii.add((char) i);
-        }
-        for(int i=97; i<=122; i++){
-            aschii.add((char) i);
-        }
-        
+    public String reverseOnlyLetters(String s) {        
         StringBuilder str = new StringBuilder(s);
         
         int i = 0;
@@ -16,9 +8,9 @@ class Solution {
         while(i<j){
             char left = str.charAt(i);
             char right = str.charAt(j);
-            if(!aschii.contains(left)){
+            if(!Character.isLetter(left)){
                 i++;
-            }else if(!aschii.contains(right)){
+            }else if(!Character.isLetter(right)){
                 j--;
             }else{
                 str.setCharAt(i, right);
