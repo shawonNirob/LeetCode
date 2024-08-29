@@ -12,4 +12,3 @@ class Solution {
         return new String(a);
     }
 }
-
