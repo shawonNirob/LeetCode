@@ -4,11 +4,11 @@ class Solution {
         
         for(int i=0; i<s.length(); i++){
             char chr = s.charAt(i);
-                
-            if(chr == '(' ) stack.push(')');
-            else if(chr == '{' ) stack.push('}');
-            else if(chr == '[' ) stack.push(']');
-            else if(stack.isEmpty() || stack.pop() != chr) return false; 
+            
+            if(chr == '(') stack.push(')');
+            else if(chr == '{') stack.push('}');
+            else if(chr == '[') stack.push(']');
+            else if(stack.isEmpty() || stack.pop()!=chr) return false;
         }
         return stack.isEmpty();
     }
