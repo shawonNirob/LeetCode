@@ -12,8 +12,12 @@ class Solution {
                 int inner = stack.pop();
                 int outer = stack.pop();
 
-                int score = outer + Math.max(2 * inner, 1);
-                stack.push(score);
+                //int score = outer + Math.max(2 * inner, 1);
+                if(inner==0){
+                    stack.push(outer + 1);
+                }else{
+                    stack.push(outer + (inner * 2));
+                }
             }
         }
         return stack.pop();
