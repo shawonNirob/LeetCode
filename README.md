@@ -10,6 +10,7 @@ This repository contains my solutions to LeetCode problems.
 | [0017-letter-combinations-of-a-phone-number](https://github.com/shawonNirob/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0020-valid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0020-valid-parentheses) |
 | [0022-generate-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0022-generate-parentheses) |
+| [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [0678-valid-parenthesis-string](https://github.com/shawonNirob/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0886-score-of-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0886-score-of-parentheses) |
 | [1078-remove-outermost-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1078-remove-outermost-parentheses) |
@@ -32,6 +33,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0022-generate-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0022-generate-parentheses) |
+| [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [0678-valid-parenthesis-string](https://github.com/shawonNirob/LeetCode/tree/master/0678-valid-parenthesis-string) |
 ## Backtracking
 |  |
@@ -45,6 +47,7 @@ This repository contains my solutions to LeetCode problems.
 ## Math
 |  |
 | ------- |
+| [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [3275-minimum-number-of-pushes-to-type-word-i](https://github.com/shawonNirob/LeetCode/tree/master/3275-minimum-number-of-pushes-to-type-word-i) |
 ## Greedy
 |  |
@@ -52,4 +55,12 @@ This repository contains my solutions to LeetCode problems.
 | [0678-valid-parenthesis-string](https://github.com/shawonNirob/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/shawonNirob/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
 | [3275-minimum-number-of-pushes-to-type-word-i](https://github.com/shawonNirob/LeetCode/tree/master/3275-minimum-number-of-pushes-to-type-word-i) |
+## Recursion
+|  |
+| ------- |
+| [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
+## Memoization
+|  |
+| ------- |
+| [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 <!---LeetCode Topics End-->
