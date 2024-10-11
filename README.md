@@ -14,6 +14,7 @@ This repository contains my solutions to LeetCode problems.
 | [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [0678-valid-parenthesis-string](https://github.com/shawonNirob/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0886-score-of-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0886-score-of-parentheses) |
+| [0957-minimum-add-to-make-parentheses-valid](https://github.com/shawonNirob/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 | [1078-remove-outermost-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1078-remove-outermost-parentheses) |
 | [1371-minimum-remove-to-make-valid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1371-minimum-remove-to-make-valid-parentheses) |
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
@@ -27,6 +28,7 @@ This repository contains my solutions to LeetCode problems.
 | [0032-longest-valid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0032-longest-valid-parentheses) |
 | [0678-valid-parenthesis-string](https://github.com/shawonNirob/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0886-score-of-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0886-score-of-parentheses) |
+| [0957-minimum-add-to-make-parentheses-valid](https://github.com/shawonNirob/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 | [1078-remove-outermost-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1078-remove-outermost-parentheses) |
 | [1371-minimum-remove-to-make-valid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1371-minimum-remove-to-make-valid-parentheses) |
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
@@ -56,6 +58,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0678-valid-parenthesis-string](https://github.com/shawonNirob/LeetCode/tree/master/0678-valid-parenthesis-string) |
+| [0957-minimum-add-to-make-parentheses-valid](https://github.com/shawonNirob/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/shawonNirob/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
 | [3275-minimum-number-of-pushes-to-type-word-i](https://github.com/shawonNirob/LeetCode/tree/master/3275-minimum-number-of-pushes-to-type-word-i) |
 ## Recursion
