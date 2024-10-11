@@ -40,6 +40,7 @@ This repository contains my solutions to LeetCode problems.
 | [0032-longest-valid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0032-longest-valid-parentheses) |
 | [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [0678-valid-parenthesis-string](https://github.com/shawonNirob/LeetCode/tree/master/0678-valid-parenthesis-string) |
+| [2349-check-if-there-is-a-valid-parentheses-string-path](https://github.com/shawonNirob/LeetCode/tree/master/2349-check-if-there-is-a-valid-parentheses-string-path) |
 ## Backtracking
 |  |
 | ------- |
@@ -69,4 +70,12 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
+## Array
+|  |
+| ------- |
+| [2349-check-if-there-is-a-valid-parentheses-string-path](https://github.com/shawonNirob/LeetCode/tree/master/2349-check-if-there-is-a-valid-parentheses-string-path) |
+## Matrix
+|  |
+| ------- |
+| [2349-check-if-there-is-a-valid-parentheses-string-path](https://github.com/shawonNirob/LeetCode/tree/master/2349-check-if-there-is-a-valid-parentheses-string-path) |
 <!---LeetCode Topics End-->
