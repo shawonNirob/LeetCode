@@ -12,6 +12,7 @@ This repository contains my solutions to LeetCode problems.
 | [0022-generate-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0022-generate-parentheses) |
 | [0032-longest-valid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0032-longest-valid-parentheses) |
 | [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
+| [0301-remove-invalid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0301-remove-invalid-parentheses) |
 | [0678-valid-parenthesis-string](https://github.com/shawonNirob/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0886-score-of-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0886-score-of-parentheses) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/shawonNirob/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
@@ -46,6 +47,7 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/shawonNirob/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0022-generate-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0022-generate-parentheses) |
+| [0301-remove-invalid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0301-remove-invalid-parentheses) |
 ## Hash Table
 |  |
 | ------- |
@@ -78,4 +80,8 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [2349-check-if-there-is-a-valid-parentheses-string-path](https://github.com/shawonNirob/LeetCode/tree/master/2349-check-if-there-is-a-valid-parentheses-string-path) |
+## Breadth-First Search
+|  |
+| ------- |
+| [0301-remove-invalid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0301-remove-invalid-parentheses) |
 <!---LeetCode Topics End-->
