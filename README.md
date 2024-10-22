@@ -19,6 +19,7 @@ This repository contains my solutions to LeetCode problems.
 | [1078-remove-outermost-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1078-remove-outermost-parentheses) |
 | [1371-minimum-remove-to-make-valid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1371-minimum-remove-to-make-valid-parentheses) |
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
+| [2044-number-of-wonderful-substrings](https://github.com/shawonNirob/LeetCode/tree/master/2044-number-of-wonderful-substrings) |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/shawonNirob/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
 | [3275-minimum-number-of-pushes-to-type-word-i](https://github.com/shawonNirob/LeetCode/tree/master/3275-minimum-number-of-pushes-to-type-word-i) |
 | [3312-number-of-changing-keys](https://github.com/shawonNirob/LeetCode/tree/master/3312-number-of-changing-keys) |
@@ -52,6 +53,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/shawonNirob/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [2044-number-of-wonderful-substrings](https://github.com/shawonNirob/LeetCode/tree/master/2044-number-of-wonderful-substrings) |
 ## Math
 |  |
 | ------- |
@@ -84,4 +86,12 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0301-remove-invalid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0301-remove-invalid-parentheses) |
+## Bit Manipulation
+|  |
+| ------- |
+| [2044-number-of-wonderful-substrings](https://github.com/shawonNirob/LeetCode/tree/master/2044-number-of-wonderful-substrings) |
+## Prefix Sum
+|  |
+| ------- |
+| [2044-number-of-wonderful-substrings](https://github.com/shawonNirob/LeetCode/tree/master/2044-number-of-wonderful-substrings) |
 <!---LeetCode Topics End-->
