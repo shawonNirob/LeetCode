@@ -5,18 +5,20 @@ class Solution {
 
         for(int i=0; i<n; i++){
 
-            Map<Character, Integer> map = new HashMap();
+            int[] store = new int[26];
             for(int j=i; j<n; j++){
                 char chr = s.charAt(j);
 
-                map.put(chr, map.getOrDefault(chr, 0) + 1);
+                store[chr - 'a']++;
 
-                int high = Integer.MIN_VALUE;
+                int high = 0;
                 int low = Integer.MAX_VALUE;
 
-                for(int freq : map.values()){
-                    high = Math.max(freq, high);
-                    low = Math.min(freq, low);
+                for(int freq : store){
+                    if(freq > 0){
+                        high = Math.max(freq, high);
+                        low = Math.min(freq, low);
+                    }
                 }
 
                 totalBeauty += high - low;
