@@ -1,35 +1,28 @@
-public class Solution {
+class Solution {
     public int beautySum(String s) {
-        int totalBeauty = 0;
         int n = s.length();
+        int totalBeauty = 0;
 
-        // Iterate through all possible starting points for substrings
-        for (int start = 0; start < n; start++) {
-            int[] charCount = new int[26]; // To store counts of characters 'a' to 'z'
-            for (int end = start; end < n; end++) {
-                char currentChar = s.charAt(end);
-                charCount[currentChar - 'a']++; // Update the character count
+        for(int i=0; i<n; i++){
 
-                // Calculate max and min frequency of characters that appear
-                int maxFreq = 0;
-                int minFreq = Integer.MAX_VALUE;
+            Map<Character, Integer> map = new HashMap();
+            for(int j=i; j<n; j++){
+                char chr = s.charAt(j);
 
-                for (int freq : charCount) {
-                    if (freq > 0) { // Only consider characters that appear in the substring
-                        if (freq > maxFreq) {
-                            maxFreq = freq;
-                        }
-                        if (freq < minFreq) {
-                            minFreq = freq;
-                        }
-                    }
+                map.put(chr, map.getOrDefault(chr, 0) + 1);
+
+                int high = Integer.MIN_VALUE;
+                int low = Integer.MAX_VALUE;
+
+                for(int freq : map.values()){
+                    high = Math.max(freq, high);
+                    low = Math.min(freq, low);
                 }
 
-                // Calculate beauty for the current substring
-                totalBeauty += maxFreq - minFreq;
+                totalBeauty += high - low;
             }
         }
 
-        return totalBeauty; // Return the total beauty of all substrings
+        return totalBeauty;
     }
 }
