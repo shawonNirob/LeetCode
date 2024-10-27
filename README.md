@@ -12,6 +12,7 @@ This repository contains my solutions to LeetCode problems.
 | [0022-generate-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0022-generate-parentheses) |
 | [0032-longest-valid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0032-longest-valid-parentheses) |
 | [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
+| [0242-valid-anagram](https://github.com/shawonNirob/LeetCode/tree/master/0242-valid-anagram) |
 | [0301-remove-invalid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0301-remove-invalid-parentheses) |
 | [0678-valid-parenthesis-string](https://github.com/shawonNirob/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0886-score-of-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0886-score-of-parentheses) |
@@ -55,6 +56,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/shawonNirob/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0242-valid-anagram](https://github.com/shawonNirob/LeetCode/tree/master/0242-valid-anagram) |
 | [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/shawonNirob/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/shawonNirob/LeetCode/tree/master/1890-sum-of-beauty-of-all-substrings) |
 | [2044-number-of-wonderful-substrings](https://github.com/shawonNirob/LeetCode/tree/master/2044-number-of-wonderful-substrings) |
@@ -106,4 +108,8 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/shawonNirob/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
+## Sorting
+|  |
+| ------- |
+| [0242-valid-anagram](https://github.com/shawonNirob/LeetCode/tree/master/0242-valid-anagram) |
 <!---LeetCode Topics End-->
