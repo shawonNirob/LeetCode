@@ -15,6 +15,7 @@ This repository contains my solutions to LeetCode problems.
 | [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [0242-valid-anagram](https://github.com/shawonNirob/LeetCode/tree/master/0242-valid-anagram) |
 | [0301-remove-invalid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0301-remove-invalid-parentheses) |
+| [0306-additive-number](https://github.com/shawonNirob/LeetCode/tree/master/0306-additive-number) |
 | [0678-valid-parenthesis-string](https://github.com/shawonNirob/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0886-score-of-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0886-score-of-parentheses) |
 | [0889-buddy-strings](https://github.com/shawonNirob/LeetCode/tree/master/0889-buddy-strings) |
@@ -54,6 +55,7 @@ This repository contains my solutions to LeetCode problems.
 | [0017-letter-combinations-of-a-phone-number](https://github.com/shawonNirob/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0022-generate-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0022-generate-parentheses) |
 | [0301-remove-invalid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0301-remove-invalid-parentheses) |
+| [0306-additive-number](https://github.com/shawonNirob/LeetCode/tree/master/0306-additive-number) |
 ## Hash Table
 |  |
 | ------- |
