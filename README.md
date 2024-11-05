@@ -49,6 +49,7 @@ This repository contains my solutions to LeetCode problems.
 | [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [0678-valid-parenthesis-string](https://github.com/shawonNirob/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [2349-check-if-there-is-a-valid-parentheses-string-path](https://github.com/shawonNirob/LeetCode/tree/master/2349-check-if-there-is-a-valid-parentheses-string-path) |
+| [2586-longest-square-streak-in-an-array](https://github.com/shawonNirob/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
 ## Backtracking
 |  |
 | ------- |
@@ -66,6 +67,7 @@ This repository contains my solutions to LeetCode problems.
 | [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/shawonNirob/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/shawonNirob/LeetCode/tree/master/1890-sum-of-beauty-of-all-substrings) |
 | [2044-number-of-wonderful-substrings](https://github.com/shawonNirob/LeetCode/tree/master/2044-number-of-wonderful-substrings) |
+| [2586-longest-square-streak-in-an-array](https://github.com/shawonNirob/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
 ## Math
 |  |
 | ------- |
@@ -90,6 +92,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [2349-check-if-there-is-a-valid-parentheses-string-path](https://github.com/shawonNirob/LeetCode/tree/master/2349-check-if-there-is-a-valid-parentheses-string-path) |
+| [2586-longest-square-streak-in-an-array](https://github.com/shawonNirob/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
 ## Matrix
 |  |
 | ------- |
@@ -118,4 +121,9 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0242-valid-anagram](https://github.com/shawonNirob/LeetCode/tree/master/0242-valid-anagram) |
+| [2586-longest-square-streak-in-an-array](https://github.com/shawonNirob/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
+## Binary Search
+|  |
+| ------- |
+| [2586-longest-square-streak-in-an-array](https://github.com/shawonNirob/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
 <!---LeetCode Topics End-->
