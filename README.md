@@ -7,6 +7,7 @@ This repository contains my solutions to LeetCode problems.
 ## String
 |  |
 | ------- |
+| [0013-roman-to-integer](https://github.com/shawonNirob/LeetCode/tree/master/0013-roman-to-integer) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/shawonNirob/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0020-valid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0020-valid-parentheses) |
 | [0022-generate-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0022-generate-parentheses) |
@@ -60,6 +61,7 @@ This repository contains my solutions to LeetCode problems.
 ## Hash Table
 |  |
 | ------- |
+| [0013-roman-to-integer](https://github.com/shawonNirob/LeetCode/tree/master/0013-roman-to-integer) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/shawonNirob/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0205-isomorphic-strings](https://github.com/shawonNirob/LeetCode/tree/master/0205-isomorphic-strings) |
 | [0242-valid-anagram](https://github.com/shawonNirob/LeetCode/tree/master/0242-valid-anagram) |
@@ -71,6 +73,7 @@ This repository contains my solutions to LeetCode problems.
 ## Math
 |  |
 | ------- |
+| [0013-roman-to-integer](https://github.com/shawonNirob/LeetCode/tree/master/0013-roman-to-integer) |
 | [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [3275-minimum-number-of-pushes-to-type-word-i](https://github.com/shawonNirob/LeetCode/tree/master/3275-minimum-number-of-pushes-to-type-word-i) |
 ## Greedy
