@@ -78,6 +78,7 @@ This repository contains my solutions to LeetCode problems.
 | [0012-integer-to-roman](https://github.com/shawonNirob/LeetCode/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/shawonNirob/LeetCode/tree/master/0013-roman-to-integer) |
 | [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
+| [0292-nim-game](https://github.com/shawonNirob/LeetCode/tree/master/0292-nim-game) |
 | [3275-minimum-number-of-pushes-to-type-word-i](https://github.com/shawonNirob/LeetCode/tree/master/3275-minimum-number-of-pushes-to-type-word-i) |
 ## Greedy
 |  |
@@ -132,4 +133,12 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [2586-longest-square-streak-in-an-array](https://github.com/shawonNirob/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
+## Brainteaser
+|  |
+| ------- |
+| [0292-nim-game](https://github.com/shawonNirob/LeetCode/tree/master/0292-nim-game) |
+## Game Theory
+|  |
+| ------- |
+| [0292-nim-game](https://github.com/shawonNirob/LeetCode/tree/master/0292-nim-game) |
 <!---LeetCode Topics End-->
