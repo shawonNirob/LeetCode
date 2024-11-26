@@ -132,6 +132,7 @@ This repository contains my solutions to LeetCode problems.
 ## Binary Search
 |  |
 | ------- |
+| [0278-first-bad-version](https://github.com/shawonNirob/LeetCode/tree/master/0278-first-bad-version) |
 | [2586-longest-square-streak-in-an-array](https://github.com/shawonNirob/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
 ## Brainteaser
 |  |
@@ -141,4 +142,8 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0292-nim-game](https://github.com/shawonNirob/LeetCode/tree/master/0292-nim-game) |
+## Interactive
+|  |
+| ------- |
+| [0278-first-bad-version](https://github.com/shawonNirob/LeetCode/tree/master/0278-first-bad-version) |
 <!---LeetCode Topics End-->
