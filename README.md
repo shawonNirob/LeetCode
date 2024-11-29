@@ -15,6 +15,7 @@ This repository contains my solutions to LeetCode problems.
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/shawonNirob/LeetCode/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0032-longest-valid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0032-longest-valid-parentheses) |
 | [0205-isomorphic-strings](https://github.com/shawonNirob/LeetCode/tree/master/0205-isomorphic-strings) |
+| [0214-shortest-palindrome](https://github.com/shawonNirob/LeetCode/tree/master/0214-shortest-palindrome) |
 | [0241-different-ways-to-add-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [0242-valid-anagram](https://github.com/shawonNirob/LeetCode/tree/master/0242-valid-anagram) |
 | [0301-remove-invalid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/0301-remove-invalid-parentheses) |
@@ -151,15 +152,18 @@ This repository contains my solutions to LeetCode problems.
 ## Rolling Hash
 |  |
 | ------- |
+| [0214-shortest-palindrome](https://github.com/shawonNirob/LeetCode/tree/master/0214-shortest-palindrome) |
 | [1508-longest-happy-prefix](https://github.com/shawonNirob/LeetCode/tree/master/1508-longest-happy-prefix) |
 ## String Matching
 |  |
 | ------- |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/shawonNirob/LeetCode/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+| [0214-shortest-palindrome](https://github.com/shawonNirob/LeetCode/tree/master/0214-shortest-palindrome) |
 | [1508-longest-happy-prefix](https://github.com/shawonNirob/LeetCode/tree/master/1508-longest-happy-prefix) |
 ## Hash Function
 |  |
 | ------- |
+| [0214-shortest-palindrome](https://github.com/shawonNirob/LeetCode/tree/master/0214-shortest-palindrome) |
 | [1508-longest-happy-prefix](https://github.com/shawonNirob/LeetCode/tree/master/1508-longest-happy-prefix) |
 ## Two Pointers
 |  |
