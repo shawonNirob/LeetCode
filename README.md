@@ -28,6 +28,7 @@ This repository contains my solutions to LeetCode problems.
 | [1078-remove-outermost-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1078-remove-outermost-parentheses) |
 | [1371-minimum-remove-to-make-valid-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1371-minimum-remove-to-make-valid-parentheses) |
 | [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/shawonNirob/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
+| [1472-increasing-decreasing-string](https://github.com/shawonNirob/LeetCode/tree/master/1472-increasing-decreasing-string) |
 | [1508-longest-happy-prefix](https://github.com/shawonNirob/LeetCode/tree/master/1508-longest-happy-prefix) |
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/shawonNirob/LeetCode/tree/master/1890-sum-of-beauty-of-all-substrings) |
@@ -73,6 +74,7 @@ This repository contains my solutions to LeetCode problems.
 | [0242-valid-anagram](https://github.com/shawonNirob/LeetCode/tree/master/0242-valid-anagram) |
 | [0889-buddy-strings](https://github.com/shawonNirob/LeetCode/tree/master/0889-buddy-strings) |
 | [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/shawonNirob/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
+| [1472-increasing-decreasing-string](https://github.com/shawonNirob/LeetCode/tree/master/1472-increasing-decreasing-string) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/shawonNirob/LeetCode/tree/master/1890-sum-of-beauty-of-all-substrings) |
 | [2044-number-of-wonderful-substrings](https://github.com/shawonNirob/LeetCode/tree/master/2044-number-of-wonderful-substrings) |
 | [2586-longest-square-streak-in-an-array](https://github.com/shawonNirob/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
@@ -123,6 +125,7 @@ This repository contains my solutions to LeetCode problems.
 ## Counting
 |  |
 | ------- |
+| [1472-increasing-decreasing-string](https://github.com/shawonNirob/LeetCode/tree/master/1472-increasing-decreasing-string) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/shawonNirob/LeetCode/tree/master/1890-sum-of-beauty-of-all-substrings) |
 ## Sliding Window
 |  |
