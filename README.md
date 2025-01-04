@@ -30,6 +30,7 @@ This repository contains my solutions to LeetCode problems.
 | [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/shawonNirob/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
 | [1472-increasing-decreasing-string](https://github.com/shawonNirob/LeetCode/tree/master/1472-increasing-decreasing-string) |
 | [1508-longest-happy-prefix](https://github.com/shawonNirob/LeetCode/tree/master/1508-longest-happy-prefix) |
+| [1530-check-if-a-string-can-break-another-string](https://github.com/shawonNirob/LeetCode/tree/master/1530-check-if-a-string-can-break-another-string) |
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/shawonNirob/LeetCode/tree/master/1890-sum-of-beauty-of-all-substrings) |
 | [2044-number-of-wonderful-substrings](https://github.com/shawonNirob/LeetCode/tree/master/2044-number-of-wonderful-substrings) |
@@ -91,6 +92,7 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0678-valid-parenthesis-string](https://github.com/shawonNirob/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/shawonNirob/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
+| [1530-check-if-a-string-can-break-another-string](https://github.com/shawonNirob/LeetCode/tree/master/1530-check-if-a-string-can-break-another-string) |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/shawonNirob/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
 | [3275-minimum-number-of-pushes-to-type-word-i](https://github.com/shawonNirob/LeetCode/tree/master/3275-minimum-number-of-pushes-to-type-word-i) |
 ## Recursion
@@ -135,6 +137,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0242-valid-anagram](https://github.com/shawonNirob/LeetCode/tree/master/0242-valid-anagram) |
+| [1530-check-if-a-string-can-break-another-string](https://github.com/shawonNirob/LeetCode/tree/master/1530-check-if-a-string-can-break-another-string) |
 | [2586-longest-square-streak-in-an-array](https://github.com/shawonNirob/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
 ## Binary Search
 |  |
