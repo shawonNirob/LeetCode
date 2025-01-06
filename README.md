@@ -34,6 +34,7 @@ This repository contains my solutions to LeetCode problems.
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/shawonNirob/LeetCode/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
 | [1777-determine-if-two-strings-are-close](https://github.com/shawonNirob/LeetCode/tree/master/1777-determine-if-two-strings-are-close) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/shawonNirob/LeetCode/tree/master/1890-sum-of-beauty-of-all-substrings) |
+| [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/shawonNirob/LeetCode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [2010-check-if-word-equals-summation-of-two-words](https://github.com/shawonNirob/LeetCode/tree/master/2010-check-if-word-equals-summation-of-two-words) |
 | [2044-number-of-wonderful-substrings](https://github.com/shawonNirob/LeetCode/tree/master/2044-number-of-wonderful-substrings) |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/shawonNirob/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
@@ -80,6 +81,7 @@ This repository contains my solutions to LeetCode problems.
 | [1472-increasing-decreasing-string](https://github.com/shawonNirob/LeetCode/tree/master/1472-increasing-decreasing-string) |
 | [1777-determine-if-two-strings-are-close](https://github.com/shawonNirob/LeetCode/tree/master/1777-determine-if-two-strings-are-close) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/shawonNirob/LeetCode/tree/master/1890-sum-of-beauty-of-all-substrings) |
+| [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/shawonNirob/LeetCode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [2044-number-of-wonderful-substrings](https://github.com/shawonNirob/LeetCode/tree/master/2044-number-of-wonderful-substrings) |
 | [2586-longest-square-streak-in-an-array](https://github.com/shawonNirob/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
 ## Math
@@ -133,6 +135,7 @@ This repository contains my solutions to LeetCode problems.
 | [1472-increasing-decreasing-string](https://github.com/shawonNirob/LeetCode/tree/master/1472-increasing-decreasing-string) |
 | [1777-determine-if-two-strings-are-close](https://github.com/shawonNirob/LeetCode/tree/master/1777-determine-if-two-strings-are-close) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/shawonNirob/LeetCode/tree/master/1890-sum-of-beauty-of-all-substrings) |
+| [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/shawonNirob/LeetCode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 ## Sliding Window
 |  |
 | ------- |
