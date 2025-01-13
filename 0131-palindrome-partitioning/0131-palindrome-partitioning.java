@@ -12,7 +12,7 @@ class Solution {
             return;
         }
 
-        for(int i= index; i<s.length(); i++){
+        for(int i = index; i<s.length(); i++){
             if(isPalindrome(s, index, i)){
                 list.add(s.substring(index, i+1));
                 helper(i+1, s, ans, list);
